@@ -46,6 +46,9 @@ cd - || exit
 
 echo "Directory ${projectName} created. Files:"
 ls -la
+echo ""
+echo "Files in public: "
+ls -la public/
 
 echo ""
 
@@ -60,6 +63,7 @@ echo ""
 echo "Setting up for use with git..."
 git init
 touch .gitignore
+touch README.md
 
 echo ""
 
