@@ -33,6 +33,7 @@ mkdir "$projectName" || exit
 cd "$projectName" || exit
 
 mkdir components
+mkdir logic
 mkdir models
 mkdir public
 mkdir utils
