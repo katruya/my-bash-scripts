@@ -71,14 +71,14 @@ read -ep "Edit the .gitignore now (y/n - default: n)? " -i "n" answer
 
 if [ "$answer" == "y" ]
 then
-    vi .gitignore
+    code .gitignore
 else
     echo "okay, repo initialized with an empty .gitignore - remember to update it!"
 fi
 
 echo ""
 
-read -ep "Do you want to install helpful packages/frameworks/apis (y/n)?" -i "y" answer
+read -ep "Do you want to install helpful packages/frameworks/apis (y/n - default: n)?" -i "n" answer
 
 if [ "$answer" == "y" ]
 then
