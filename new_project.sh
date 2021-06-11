@@ -32,22 +32,26 @@ mkdir "$projectName" || exit
 
 cd "$projectName" || exit
 
-mkdir components
-mkdir logic
-mkdir models
+mkdir src
+mkdir src/components
+mkdir src/logic
+mkdir src/models
+mkdir src/utils
+mkdir src/views
+mkdir database
+mkdir tests
+mkdir logs
 mkdir public
-mkdir utils
-mkdir views
-touch index.js
+mkdir public/img
+touch src/index.js
+touch public/index.html
+touch public/style.css
 
-cd public/ || exit
-touch index.html style.css
-cd - || exit
+
 
 echo "Directory ${projectName} created. Files:"
 ls -la
-echo ""
-echo "Files in public: "
+ls -la src/
 ls -la public/
 
 echo ""
