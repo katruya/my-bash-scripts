@@ -47,7 +47,7 @@ touch src/index.js
 touch public/index.html
 touch public/style.css
 
-
+curl -o - "https://raw.githubusercontent.com/katruya/my-bash-scripts/main/default_html.html" > public/index.html
 
 echo "Directory ${projectName} created. Files:"
 ls -la
