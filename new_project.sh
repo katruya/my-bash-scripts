@@ -1,20 +1,6 @@
 #!/bin/bash
 
-# Directory structure
-# --------------------
-# project/
-#   |
-#   components/
-#   |
-#   utils/
-#   |
-#   public/ - index.html; style.css
-#   |
-#   models/
-#   |
-#   views/ 
-#   |
-#   index.js
+# Script to automate making a NodeJS project
 
 echo "NodeJS Project Creator v1.0"
 echo "Created by DemonKat"
@@ -25,12 +11,12 @@ projectName="$1"
 
 if [ "$1" == "" ]
 then
-    projectName="newNodeJSProject";   
+    projectName="newNodeJSProject" || exit 1   
 fi
 
-mkdir "$projectName" || exit
+mkdir "$projectName" || exit 1
 
-cd "$projectName" || exit
+cd "$projectName" || exit 1
 
 mkdir src
 mkdir src/components
@@ -42,8 +28,8 @@ mkdir database
 mkdir tests
 mkdir logs
 mkdir public
-mkdir public/img
 touch src/index.js
+mkdir public/img
 touch public/index.html
 touch public/style.css
 
