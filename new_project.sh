@@ -2,7 +2,7 @@
 
 # Script to automate making a NodeJS project
 
-echo "NodeJS Project Creator v1.0"
+echo "JavaScript Project Creator v1.0"
 echo "Created by DemonKat"
 
 echo "" # creates space between output sections
@@ -11,7 +11,7 @@ projectName="$1"
 
 if [ "$1" == "" ]
 then
-    projectName="newNodeJSProject" || exit 1   
+    projectName="newKatJSProject" || exit 1   
 fi
 
 mkdir "$projectName" || exit 1
@@ -33,7 +33,8 @@ mkdir public/img
 touch public/index.html
 touch public/style.css
 
-curl -o - "https://raw.githubusercontent.com/katruya/my-bash-scripts/main/default_html.html" > public/index.html
+curl -o - "https://raw.githubusercontent.com/katruya/KatJS/main/public/index.html" > public/index.html
+
 
 echo "Directory ${projectName} created. Files:"
 ls -la
@@ -74,20 +75,23 @@ if [ "$answer" == "y" ]
 then
     echo "Now installing popular node packages..."
     echo ""
-    npm install mocha
-    npm install express
-    npm install socket.io
-    npm install @hapi/hapi
-    npm install nodemailer
-    npm install pug
-    npm install passport
-    npm install commonjs
-    npm install commander
-    npm install bower
-    npm install create-react-app
-    npm install webpack
-    npm install lodash
-    npm install tsc
+    npm install mocha --save-dev
+    npm install express --save-dev
+    npm install socket.io --save-dev
+    npm install @hapi/hapi --save-dev
+    npm install nodemailer --save-dev
+    npm install nodemon --save-dev
+    npm install mysql --save-dev
+    npm install pug --save-dev
+    npm install passport --save-dev
+    npm install commonjs --save-dev
+    npm install commander --save-dev
+    npm install bower --save-dev
+    npm install create-react-app --save-dev
+    npm install webpack --save-dev
+    npm install webpack webpack-cli --save-dev
+    npm install lodash --save-dev
+    npm install tsc --save-dev
     echo "If you need additional packages, run $ npm install <package_name>"
     echo "To uninstall a package, run $ npm uninstall <package_name>"
 else
