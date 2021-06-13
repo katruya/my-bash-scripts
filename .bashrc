@@ -1,16 +1,32 @@
-source /usr/share/defaults/etc/profile
+# MY ALIASES
 
+# Edit .bashrc
 alias ebrc='code ~/.bashrc && cd -'
+alias sbrc='source ~/.bashrc'
+alias cbrc='cat ~/.bashrc | less'
 
+# System
+alias lla='ls -la'
 alias cls='clear'
+alias mkf='touch'
+alias mkd='mkdir'
 
-alias apt='sudo eopkg'
+# FUCK
+alias fuck='sudo'
+alias fuckit='sudo su'
 
-alias up='sudo eopkg upgrade'
+alias fuckup='sudo apt update && sudo apt upgrade'
+
+# PG f**k
+alias fk='sudo'
+alias fkit='sudo su'
+
+alias fkup='sudo apt update && sudo apt upgrade'
 
 # git commands
-
 alias gnt='git init'
+
+alias gc='git clone'
 
 alias ga='git add'
 
@@ -24,18 +40,27 @@ alias gst='git status'
 
 alias gph='git push'
 
-# other
+# node/npm commands
+alias js='node'
+alias nit='npm init'
+alias ni='npm install'
+alias nps='npm start'
+alias npt='npm test'
+alias demon='nodemon --exitcrash'
 
-alias lla='ls -la'
+# Compile & Run - C++
+alias cppc='g++ -I -std=c++14 *.cpp -o app && ./app'
 
-alias sbrc='source ~/.bashrc'
+# run custom scripts
+alias kat='~/scripts/new_project.sh'
+alias fdmkr='~/scripts/folder_maker.sh'
+alias flmkr='~/scripts/file_maker.sh'
 
-alias cbrc='cat ~/.bashrc | less'
+# MY FUNCTIONS
+function rename () {
+    mv "$1" "$2"
+}
 
-alias nj='node'
-
-alias code='~/code/VSC/bin/code'
-
-# custom scripts
-alias ncreate='~/scripts/new_project.sh'
-alias foldermaker='~/scripts/folder_maker.sh'
+function remove () {
+    rm -rfi "$1"
+}
